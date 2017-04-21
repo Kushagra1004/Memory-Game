@@ -19,7 +19,7 @@ def credit():
 
 main_list=['Cricket','Football','Rugby','Hockey','Basketball','Baseball','Volleyball','Lawn Tennis','Badminton','Table Tennis','KitKat','Lolipop','Froyo','Nougat','JellyBeans','IceCream Sandwich','GingerBread','Honeycomb','Eclair','Donut','Red','Orange','Blue','Green','Black','Grey','Pink','Brown','White','Purple','United States','India','Russia','China','Brazil','Canada','London','Switzerland','Spain','Australia']
 color_list=['powder blue','wheat1','plum1','ivory2','coral','PeachPuff2','SlateBlue1']
-time1=4
+time1=8
 
 def update(t,l):
     global time1
@@ -32,9 +32,9 @@ menubar=tk.Menu(main_window)
 main_window.config(menu=menubar)
 lmenu=tk.Menu(menubar,tearoff=False)
 menubar.add_cascade(label="Levels",menu=lmenu)
-lmenu.add_command(label="Easy",command=lambda:update(4,"  Easy     "))
-lmenu.add_command(label="Medium",command=lambda:update(3,"Medium"))
-lmenu.add_command(label="Hard",command=lambda:update(2,"  Hard     "))
+lmenu.add_command(label="Easy",command=lambda:update(8,"  Easy     "))
+lmenu.add_command(label="Medium",command=lambda:update(5,"Medium"))
+lmenu.add_command(label="Hard",command=lambda:update(3,"  Hard     "))
 
 menubar.add_command(label="Credits",command=credit)
 menubar.add_command(label="Help",command=help)
@@ -148,16 +148,16 @@ def click_start(self):
     ninth_random_item = list_of_random_items[8]
     tenth_random_item = list_of_random_items[9]
 
-    label1=tk.Label(frame,text=first_random_item,bg=random.choice(color_list)).place(x=randint(10,150),y=randint(40,120))
-    label2=tk.Label(frame,text=second_random_item,bg=random.choice(color_list)).place(x=randint(150,300),y=randint(40,120))
-    label3=tk.Label(frame,text=third_random_item,bg=random.choice(color_list)).place(x=randint(300,450),y=randint(40,120))
+    label1=tk.Label(frame,text=first_random_item,bg=random.choice(color_list)).place(x=randint(10,150),y=randint(30,120))
+    label2=tk.Label(frame,text=second_random_item,bg=random.choice(color_list)).place(x=randint(150,300),y=randint(30,120))
+    label3=tk.Label(frame,text=third_random_item,bg=random.choice(color_list)).place(x=randint(300,420),y=randint(30,120))
     label4=tk.Label(frame,text=fourth_random_item,bg=random.choice(color_list)).place(x=randint(10,150),y=randint(120,240))
     label5=tk.Label(frame,text=fifth_random_item,bg=random.choice(color_list)).place(x=randint(150,300),y=randint(120,240))
-    label6=tk.Label(frame,text=sixth_random_item,bg=random.choice(color_list)).place(x=randint(300,450),y=randint(120,240))
+    label6=tk.Label(frame,text=sixth_random_item,bg=random.choice(color_list)).place(x=randint(300,420),y=randint(120,240))
     label7=tk.Label(frame,text=seventh_random_item,bg=random.choice(color_list)).place(x=randint(10,150),y=randint(240,400))
     label8=tk.Label(frame,text=eighth_random_item,bg=random.choice(color_list)).place(x=randint(150,300),y=randint(240,400))
-    label9=tk.Label(frame,text=ninth_random_item,bg=random.choice(color_list)).place(x=randint(300,450),y=randint(240,400))
-    label10=tk.Label(frame,text=tenth_random_item,bg=random.choice(color_list)).place(x=randint(20,450),y=randint(40,400))
+    label9=tk.Label(frame,text=ninth_random_item,bg=random.choice(color_list)).place(x=randint(300,420),y=randint(240,400))
+    label10=tk.Label(frame,text=tenth_random_item,bg=random.choice(color_list)).place(x=randint(20,420),y=randint(40,400))
 
     timer(time1)
 
